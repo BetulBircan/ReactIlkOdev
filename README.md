@@ -22,17 +22,17 @@ async function getData(user_id) //getData(user_id) fonksiyonu oluşturuldu.Sıra
 
     const {data:post}= await axios("https://jsonplaceholder.typicode.com/posts?userId="+user_id)  //axios ile post numaralarını almsı için.
 
-    console.log(user,post);
+    console.log(user,post);  //ekrana yazdırma
 
 } 
 
-export default getData  //index.js dosyasına dah,l etmek için dışa aktarma yapıldı.
+export default getData  //index.js dosyasına dahil etmek için dışa aktarma yapıldı.
 ```
 
 **index.js Kodları:**
 
 ```
-    import getData from './app.js'  //app.js dosyası import edildi.
+    import getData from './app.js'  //app.js dosyası index.js e dahil edildi edildi.
 
     console.log(getData(1));  //getdata fonksiyonuna 1 parametresi verilerek id si 1 olan kullanıcıların verileri ekrana yazdırıldı.
 ```
